@@ -31,10 +31,4 @@ dic_net = mat_to_dic(mat, tcolor)
 # dijkstra algorithm applied to this problem
 result = dijkstra_stations( dic_net, start, final )
 
-#stations = list(mat.iloc[:,0])
-#print(stations)
-#print(mat)
-
 print(result)
-# posibles errores
-# comprobar que la matriz inicial es igual a traspuesta
