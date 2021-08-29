@@ -2,26 +2,32 @@
 """
 Created on Sat Aug 28 19:01:43 2021
 
-@author: retac
+Tarea para Buda.com
+
+Dijkstra Algorithm to find shortest path between
+starting and ending stations
+
+@author: Francisco Alejandro Retamal Reinoso
 """
+import copy
 
 def dijkstra_stations( graph, s, e ):
     
+    infinity = float('inf')
+    unseenStations = copy.deepcopy( graph )
+    track_path = []
     shortest_d = {}
     track_prev = {}
-    unseenNodes = graph
-    infinity = 999999 #representation of infinity
-    track_path = []
     
-    for station in unseenNodes:
+    for station in unseenStations:
         shortest_d[station] = infinity
     shortest_d[s] = 0
     
-    while unseenNodes:
+    while unseenStations:
         
         min_distance_node = None
         
-        for station in unseenNodes:
+        for station in unseenStations:
             if min_distance_node is None:
                 min_distance_node = station
             elif shortest_d[station] < shortest_d[min_distance_node]:
@@ -35,7 +41,7 @@ def dijkstra_stations( graph, s, e ):
                 shortest_d[child_node] = weight + shortest_d[min_distance_node]
                 track_prev[child_node] = min_distance_node
                 
-        unseenNodes.pop(min_distance_node)
+        unseenStations.pop(min_distance_node)
         
     currentNode = e
     

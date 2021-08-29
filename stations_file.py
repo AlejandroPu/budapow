@@ -2,9 +2,9 @@
 """
 Created on Thu Aug 26 18:42:40 2021
 
-Tarea Buda
+Tarea para Buda.com
 
-@author: retac
+@author: Francisco Alejandro Retamal Reinoso
 """
 
 import pandas as pnds
