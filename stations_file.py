@@ -9,11 +9,15 @@ Tarea para Buda.com
 
 import pandas as pnds
 
+# This function open the fname archive in the path
+# defined in fpath.
 def stations_matrix( fname ):
     
     fpath = "archivos/"
     sepchar = [";", ",","\s+"]
     
+    # for comma separation character choose sepchar[1]
+    # and sepchar[2] to tab or space
     matrix = pnds.read_csv( fpath + fname, sep = sepchar[0])
 
     return matrix

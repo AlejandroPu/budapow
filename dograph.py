@@ -24,7 +24,8 @@ def mat_to_dic( matrix, train_color ):
         conections = list(matrix.iloc[0:,(word+1)])
         for conection in range( qstations ):
             if conections[conection] == 1:
-                graph[stations[word]][stations[conection]] = conections[conection]
+                graph[stations[word]][stations[conection]] = \
+                    conections[conection]
     
     ## net remaking for green or red trains
     if (train_color == 'green') or (train_color == 'red'):
