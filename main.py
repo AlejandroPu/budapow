@@ -6,8 +6,8 @@ Tarea para Buda.com
 
 @author: Francisco Alejandro Retamal Reinoso
 """
-from stations_paths import StationsPathsInput
-from stations_file import stations_matrix
+from class_defs import StationsPathsInput
+from file_import import stations_matrix
 from dograph import mat_to_dic
 from shortest_path import dijkstra_stations
 
@@ -15,7 +15,7 @@ from shortest_path import dijkstra_stations
 
 # creating an StationsPathsInput Object with inputs
 # train_color is usefull only if it is "green" or "red"
-this_net = StationsPathsInput( "estaciones02.csv")
+this_net = StationsPathsInput( "estaciones02.csv" )
 this_net.start_end_stations( "A", "F" )
 this_net.train_color( "normal" ) 
 
