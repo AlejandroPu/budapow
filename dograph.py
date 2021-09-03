@@ -28,7 +28,7 @@ def mat_to_dic( matrix, train_color ):
                     conections[conection]
     
     ## net remaking for green or red trains
-    if (train_color == 'green') or (train_color == 'red'):
+    if (train_color=='green') or (train_color=='red'):
         
         # recognize colored stations in lists to red and green
         red_stations = []
@@ -40,9 +40,9 @@ def mat_to_dic( matrix, train_color ):
             if colorsta == 'red': red_stations.append(thisstat)
 
         # Depend on train color, recognize stations not allowed
-        if (train_color == 'green'):
+        if ( train_color == 'green' ):
             not_stations = copy.deepcopy( red_stations )
-        if (train_color == 'red'):
+        if ( train_color == 'red' ):
             not_stations = copy.deepcopy( green_stations )
         
         # getting out not allowed stations in not_stations list
