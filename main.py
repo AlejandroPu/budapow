@@ -15,7 +15,7 @@ from shortest_path import dijkstra_stations
 
 # creating an StationsPathsInput Object with inputs
 # train_color is usefull only if it is "green" or "red"
-this_net = StationsPathsInput( "estaciones02.csv" )
+this_net = StationsPathsInput( "estaciones02.csv")
 this_net.start_end_stations( "A", "F" )
 this_net.train_color( "normal" ) 
 

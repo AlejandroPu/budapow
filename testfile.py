@@ -2,6 +2,8 @@
 """
 Created on Wed Sep  1 12:12:12 2021
 
+Test with unittest module
+
 @author: retac
 """
 
@@ -10,6 +12,7 @@ from dograph import mat_to_dic
 from shortest_path import dijkstra_stations
 from testspath.data_for_tests import data01
 
+#data to test
 mat, normal_dic, red_dic, green_dic = data01()
 
 class TestShortestNet(unittest.TestCase):
